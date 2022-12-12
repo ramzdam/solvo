@@ -34,6 +34,12 @@ Make sure composer is install in your dev machine
 composer install
 ```
 
+If autoload doesn't work make sure to run
+
+```bash
+composer dump-autoload
+```
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
