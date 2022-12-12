@@ -7,6 +7,11 @@ use Item\ElectronicItem\Controller as Controller;
 use Item\ElectronicItem\ElectronicItem as ElectronicItem;
 use Item\ElectronicItem\Console as Console;
 
+/**
+ * Class Order
+ * Responsible for handling creating of ElectronicItem 
+ * instances based on selected option
+ */
 class Order
 {
 
@@ -21,14 +26,12 @@ class Order
 		}		
 	}
 
-	public function canMakeExtra($item)
-	{
-		
-		if ($item->maxExtras() ) {
-			return "Max extra have been reached";
-		}
-	}
 
+	/**
+	 * Create Orders based on the defined list.
+	 * 
+	 * @return $orders array()<ElectronicItem>
+	 */
 	public function makeDefinedOrder()
 	{
 		$orders = [];
@@ -60,6 +63,11 @@ class Order
 		return $orders;
 	}
 
+	/**
+	 * Display a console choices to create an Order that will be generated
+	 * 
+	 * @return ElectronicItem
+	 */
 	public function makeOrder()
 	{
 		echo "==================================================
@@ -105,6 +113,11 @@ Enter your choice: ");
 		}
 	}
 
+	/**
+	 * Generate an ElectronicItem of type CONSOLE
+	 * 
+	 * @return new Console - ElectronicItem
+	 */
 	public function createConsole()
 	{
 		$min = 10000;
@@ -115,6 +128,12 @@ Enter your choice: ");
 		return new Console($name, $price);		
 	}
 
+	/**
+	 * Generate an ElectronicItem of type CONTROLLER
+	 * 
+	 * @param $type string - Identify what type of controller the item is. Either WIRED or REMOTE
+	 * @return new Controller - ElectronicItem
+	 */
 	public function createController($type)
 	{
 		$min = 10000;
@@ -127,6 +146,11 @@ Enter your choice: ");
 		
 	}
 
+	/**
+	 * Generate an ElectronicItem of type MICROWAVE
+	 * 
+	 * @return new Microwave - ElectronicItem
+	 */
 	public function createMicrowave()
 	{
 		$min = 10000;
@@ -138,6 +162,11 @@ Enter your choice: ");
 		return new Microwave($name, $price);
 	}
 
+	/**
+	 * Generate an ElectronicItem of type TELEVISION
+	 * 
+	 * @return new Television - ElectronicItem
+	 */
 	public function createTelevision()
 	{
 		$min = 10000;

@@ -4,6 +4,10 @@ namespace Item\ElectronicItem;
 use Interface\IConfigurable;
 use Trait\Purchase;
 
+/**
+ * Class Controller child of ElectronicItem class.
+ * Implements IConfigurable which allows the ElectronicItem to set Extras
+ */
 class Controller extends ElectronicItem implements IConfigurable
 {
 	use Purchase;
