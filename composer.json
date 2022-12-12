@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Item\\":"src/Item",
+            "Interface\\":"src/Interface",
+            "Trait\\":"src/Trait"
+        }
+    }
+}
