@@ -26,6 +26,11 @@ Clone the given repository into your local by running
 git clone https://github.com/ramzdam/solvo.git .
 ```
 
+Checkout to master branch
+```
+git checkout master
+```
+
 ## Install dependency
 
 Make sure composer is install in your dev machine
