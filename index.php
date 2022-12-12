@@ -23,6 +23,11 @@ Enter your choice: ");
 	}
 }
 
+/**
+ * Output the question one result
+ * 
+ * @return display via command line
+ */
 function questionOne()
 {
 	$orders = [];
@@ -48,6 +53,11 @@ function questionOne()
 	outputOrders($orders);
 }
 
+/**
+ * Output the question two result
+ * 
+ * @return display via command line
+ */
 function questionTwo()
 {
 	$orders = [];
@@ -59,6 +69,11 @@ function questionTwo()
 	outputInquiries($orders, Console::ELECTRONIC_GROUP_TYPE);
 }
 
+/**
+ * Output the result for question two
+ * 
+ * @param $orders array()<ElectronicItem>
+ */
 function outputInquiries($orders, $inquiry_type = Console::ELECTRONIC_GROUP_TYPE) 
 {
 	$total = 0;
@@ -95,6 +110,11 @@ Order Summary
 	}
 }
 
+/**
+ * Ouput the orders for question one
+ * 
+ * @param $orders array()<ElectronicItem>
+ */
 function outputOrders($orders)
 {
 	$total = 0;
@@ -128,6 +148,12 @@ Order Summary
 
 }
 
+
+/**
+ * Sort the generated orders into a ascending order
+ * 
+ * @param $orders array()<ElectronicItem>
+ */
 function sortOrders($orders) {
 	$new_orders = $orders;
 
@@ -147,6 +173,12 @@ function sortOrders($orders) {
 	return $new_orders;
 }
 
+/**
+ * Set the extras for each order set
+ * 
+ * @param $order_item Item\ElectronicItem\ElectronicItem
+ * @return Item\ElectronicItem\ElectronicItem
+ */
 function setExtraOrderItem($order_item)
 {
 	$choice= readline("Would you like to add extra to the item " . $order_item->getName() . "? Press Y for yes any key otherwise: ");
